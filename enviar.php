@@ -19,7 +19,7 @@ if (!pg_execute($conn, "my_insert", array($nombre, $email, $telefono))) {
     echo "Error al insertar datos: " . pg_last_error($conn);
 } else {
     // Si la inserción es exitosa, redirigimos a una página de confirmación
-    header("location: confirmacion.html");
+    header("location:confirmacion.html");
     exit;
 }
 
