@@ -159,29 +159,6 @@ section {
   margin-top:13px;
 }
 
-.wp-btn {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 60px;
-  height: 60px;
-  margin: 0 1rem 1rem 0;
-  border: none;
-  outline: none;
-  border-radius: 100%;
-  background: #25d366;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.wp-btn:hover {
-  transform: scale(1.2);
-}
-
-.fa-whatsapp:before {
-  color: #fff;
-  font-size: 2rem;
-}
 
 /* Footer */
 .footer {
@@ -485,6 +462,7 @@ form {
   width: 300px;
   padding: 20px;
   border: 1px solid #ccc;
+  align-content: center;
 }
 
 label {
@@ -498,6 +476,12 @@ input {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   color: #0d1117;
+}
+
+.form-group{
+  margin: auto;
+  padding: initial;
+  align-content: center;
 }
 
 button {

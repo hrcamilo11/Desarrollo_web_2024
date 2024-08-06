@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+
     <title>Walk World Tour</title>
 </head>
 
@@ -106,30 +108,44 @@
             un simple paso</h4>
 
         <section id="contact" class="section section-5">
-            <div class="form-container">
-                <form id="contactForm" action="enviar.php" method="post">
-                    <h2>Contáctanos</h2>
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+            <div class="form-group">
 
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email"
-                           id="email" name="email" required>
+                <form id="contactForm" action="./Backend/FormSend.php" method="post" class="form">
 
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="nombre" id="nombre" name="nombre" class="form-control"
+                               placeholder="Tu nombre aqui"></div>
 
-                    <button type="submit">Enviar</button>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                               placeholder="Tu correo aqui"></div>
+
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Telefono</label>
+                        <input type="telefono" id="telefono" name="telefono" class="form-control"
+                               placeholder="Tu telefono aqui"></div>
+
+                    <button type="submit" class="btn btn-primary" id="Enviar">Enviar</button>
                 </form>
             </div>
-        </section>
 
-        <button id="wp-btn" class="wp-btn">
-            <a href="https://wa.me/573000000000?text=Hola"
-               class="whatsapp" target="_blank">
-                <i class="fa fa-whatsapp whatsapp-icon"></i>
-            </a>
-        </button>
+            <script>
+
+                $('Enviar').click(function (){
+
+                })
+            </script>
+
+            </section>
+
+
+        <a href="https://wa.me/573000000000?text=Hola"
+           class="whatsapp" target="_blank">
+            <i class="fa fa-whatsapp whatsapp-icon"></i>
+        </a>
+
     </main>
 
     <footer class="footer">
