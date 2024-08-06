@@ -27,7 +27,7 @@ if ($stmt->execute()) {
     exit(); // Importante: detener la ejecución del script después de la redirección
 } else {
     echo "Error: " . $stmt->error;
-    
+
 // Cerrar la conexión
 $conn->close();
 ?>
