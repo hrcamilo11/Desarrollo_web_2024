@@ -25,12 +25,21 @@ pg_close($str_conn);
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="styles/style.css">
     <title>¡Contacto enviado!</title>
 </head>
 <body>
 
-<h1>¡Datos recibidos!</h1>
-<p>Tu contacto ha sido enviado con éxito.</p>
+<h3 class="text-primary">
+  Datos enviados:
+  <small class="text-secondary "> Te contactaremos pronto</small>
+</h3>
+
+<div class="alert alert-warning" role="alert">
+  ¡Tu contacto ha sido enviado con éxito!
+</div>
 <button onclick="location.href='index.html'">Inicio</button>
 </body>
 </html>
