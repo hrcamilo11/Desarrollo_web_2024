@@ -1,27 +1,33 @@
 <?php
+// Conexión a la base de datos
+$servername = "postgres://ep-old-grass-a4m8erqd.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require";
+$user = "default";
+$pass = "pnLNdv3GBE6r";
+// Crear conexión
+$conn = pg_connect($servername,$user,$pass);
 
-$conn = pg_connect("postgres://default:pnLNdv3GBE6r@ep-old-grass-a4m8erqd.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require");
-
-if (!$conn) {
-    die("No se pudo conectar a la base de datos: " . pg_last_error());
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
+// Obtener datos del formulario
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 
-
-$query = "INSERT INTO contactos (nombre, email, telefono) VALUES ($1, $2, $3)";
-$stmt = pg_prepare($conn, "my_insert", $query);
+// Preparar la sentencia SQL (usando sentencias preparadas para evitar inyecciones SQL)
+$stmt = $conn->prepare("INSERT INTO contactos (nombre, email, telefono) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $nombre, $email, $telefono);
 
 // Ejecutar la sentencia
-if (!pg_execute($conn, "my_insert", array($nombre, $email, $telefono))) {
-    echo "Error al insertar datos: " . pg_last_error($conn);
+if ($stmt->execute()) {
+    echo "Nuevo registro creado correctamente";
+    header("Location: confirmacion.html");
+    exit(); // Importante: detener la ejecución del script después de la redirección
 } else {
-    // Si la inserción es exitosa, redirigimos a una página de confirmación
-    header("location:confirmacion.html");
-    exit;
-}
-
-pg_close($conn);
+    echo "Error: " . $stmt->error;
+    
+// Cerrar la conexión
+$conn->close();
 ?>

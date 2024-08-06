@@ -43,8 +43,6 @@ export function visualizeForm() {
 
       // Si todas las validaciones son correctas, enviar el formulario
       if (isValid) {
-        // Aquí puedes enviar el formulario al servidor
-        // ... (código para enviar los datos al servidor)
         console.log('Formulario enviado correctamente');
       }
     });
@@ -52,27 +50,28 @@ export function visualizeForm() {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Evita el envío por defecto del formulario
 
-      // Aquí puedes agregar tus validaciones
 
-      // Enviar el formulario utilizando fetch o XMLHttpRequest
-      fetch('enviar.php', {
-        method: 'POST',
-        body: new FormData(this)
-      })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Error al enviar el formulario');
-            }
-            return response.text();
-          })
-          .then(data => {
-            // Redirigir a la página de confirmación
-            window.location.href = 'confirmacion.html';
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            // Mostrar un mensaje de error al usuario
-          });
+
+        // Enviar el formulario
+        fetch('enviar.php', {
+            method: 'POST',
+            body: new FormData(form)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al enviar el formulario');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Redirigir a la página de confirmación
+                window.location.href = 'confirmacion.html';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Mostrar un mensaje de error más específico al usuario
+                alert('Ocurrió un error al enviar el formulario. Por favor, inténtalo nuevamente más tarde.');
+            });
     });
 
 }
