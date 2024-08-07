@@ -8,11 +8,15 @@
 }
 
 html {
-  font-family: "Mulish Variable", sans-serif;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: normal;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Lexend", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -20,6 +24,8 @@ body {
   margin: auto !important;
   background: #0d1117;
 }
+
+
 
 /* Header styles  */
 .header {
