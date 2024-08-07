@@ -4,33 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <title>Walk World Tour</title>
+
+    <title>Walk World Tour - Desarrollo 2024 - 1</title>
 </head>
 
 <body>
     <header class="header">
         <nav>
             <div class="logo">
-                <a href="index.html">WalkWorld.<span class="highlighted">Tour</span></a>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+                    </svg>
+                    WalkWorld.<span class="highlighted">Tour</span></a>
             </div>
             <div class="rigth-menu">
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <ul class="menu">
-                    <li><a href="#youtube-channel" class="translate" data-section="menu"
-                            data-value="youtube">Youtube</a></li>
-                    <li><a href="#about" class="translate" data-section="menu" data-value="about">Acerca de</a></li>
-                    <li><a href="#gallery" class="translate" data-section="menu" data-value="gallery">Galería</a></li>
-                    <li><a href="#contact" class="translate" data-section="menu" data-value="contact">Contacto</a></li>
+                    <li><i class="bi bi-youtube"></i>
+                        <a href="#youtube-channel" class="translate" data-section="menu"
+                            data-value="youtube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                            </svg>
+                            Youtube
+                        </a></li>
+                    <li><i class="bi bi-file-person"></i>
+                        <a href="#about" class="translate" data-section="menu" data-value="about">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                                <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                            Acerca de
+                        </a></li>
+                    <li><i class="bi bi-columns-gap"></i>
+                        <a href="#gallery" class="translate" data-section="menu" data-value="gallery">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                                <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                            </svg>
+                            Galería
+                        </a></li>
+                    <li><i class="bi bi-person-lines-fill"></i>
+                        <a href="#contact" class="translate" data-section="menu" data-value="contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                            </svg>
+                            Contacto
+                        </a></li>
                 </ul>
             </div>
         </nav>
@@ -93,7 +126,6 @@
                             <iframe width="424" height="238"
                                     src="https://www.youtube.com/embed/C928mvOhKho"
                                     title="🔥Bienvenid@s a este gran viaje: LA VUELTA AL MUNDO A PIE🌍👣"
-                                    frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
@@ -136,48 +168,22 @@
             </div>
         </section>
 
-        <h4 class="phrase translate" data-section="main" data-value="phrase2">Un viaje de mil millas ha de comenzar con
-            un simple paso</h4>
+        <h4 class="phrase translate" data-section="main" data-value="phrase1">
+            Un viaje de mil millas ha de comenzar con un simple paso
+        </h4>
 
-        <section id="contact" class="section section-5">
-
-            <div class="mt-5">
-
-                <form class="form" action="./Backend/FormSend.html" method="post">
-
-                    <h2>Te contactamos</h2>
-
-                    <div class="mt-3">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu nombre completo">
-                    </div>
-
-                    <div class="mt-3">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu email">
-                    </div>
-
-                    <div class="mt-3">
-                        <label for="telefono">Nombre Completo</label>
-                        <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Ingresa tu telefono">
-                    </div>
-
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheckbox">
-                        <label class="form-check-label" for="SwitchCheckbox">Acepto ser contactado</label>
-                    </div>
-
-                    <input class="btn btn-primary" type="submit" value="Enviar">
-
-                </form>
+        <section id="contact" class="section-2">
+            <div class="form-frame">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScR89hT5_fQPSZh-OX1ZtPwYsrTCHPDNHh0O-ildKly9AUcaw/viewform?embedded=true" width="900" height="704" frameborder="1" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
-
         </section>
 
 
         <a href="https://wa.me/573000000000?text=Hola"
            class="whatsapp" target="_blank">
-            <i class="fa fa-whatsapp whatsapp-icon"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+            </svg>
         </a>
 
     </main>
